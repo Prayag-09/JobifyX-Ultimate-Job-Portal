@@ -1,0 +1,34 @@
+[
+	{
+		"question": "What is JobifyX?",
+		"answer": "JobifyX is a cutting-edge job portal that connects job seekers with employers. It enables companies to post job openings and allows users to search and apply for jobs effortlessly. With its intuitive interface and secure authentication, JobifyX is designed to simplify the hiring process for both candidates and organizations."
+	},
+	{
+		"question": "How can employers post a job?",
+		"answer": "Employers can easily post jobs by navigating to the 'Post a Job' section after logging into their accounts. Simply fill in the required job details, such as title, description, and qualifications, and submit the form to publish your listing."
+	},
+	{
+		"question": "How can job seekers search for jobs?",
+		"answer": "Job seekers can use the search bar on the homepage or the dedicated job search page to find jobs by entering keywords, location, category, and other filters."
+	},
+	{
+		"question": "How do job seekers apply for jobs?",
+		"answer": "To apply for a job, click on the job listing and follow the provided application instructions. You may need to upload your resume and provide additional details."
+	},
+	{
+		"question": "Can job seekers save jobs to apply later?",
+		"answer": "Yes, job seekers can save job listings by clicking the 'Save Job' button on the job listing page. Saved jobs can be accessed from the 'Saved Jobs' section in their profile."
+	},
+	{
+		"question": "How can job seekers track their applications?",
+		"answer": "Job seekers can monitor the status of their applications in the 'Applications' section within their profile. This section provides real-time updates on the progress of each application."
+	},
+	{
+		"question": "Is JobifyX free to use?",
+		"answer": "Yes, JobifyX is free for job seekers. Employers can choose from flexible pricing plans for posting job listings and accessing premium features."
+	},
+	{
+		"question": "Can employers manage applications on JobifyX?",
+		"answer": "Yes, employers can manage applications through their dashboard. They can review, shortlist, and communicate with candidates directly on the platform."
+	}
+]
