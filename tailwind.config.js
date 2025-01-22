@@ -5,6 +5,10 @@ export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
+			fontFamily: {
+        sans: ["Cascadia Code", "ui-sans-serif", "system-ui"],
+        mono: ["Cascadia Code", "ui-monospace"],
+		},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',

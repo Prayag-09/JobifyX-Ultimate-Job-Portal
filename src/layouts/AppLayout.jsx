@@ -10,7 +10,7 @@ const AppLayout = () => {
 				<Outlet />
 			</main>
 			<footer className='text-center p-10 text-xl text-white mt-10'>
-				Made by Prayag
+				Made by Prayag with 💖
 			</footer>
 		</div>
 	);

@@ -1,5 +1,11 @@
 import { Link, useSearchParams } from 'react-router-dom';
-import { SignedIn, SignedOut, SignIn, UserButton } from '@clerk/clerk-react';
+import {
+	SignedIn,
+	SignedOut,
+	SignIn,
+	UserButton,
+	useUser,
+} from '@clerk/clerk-react';
 import { Button } from './ui/button';
 import { useEffect, useState } from 'react';
 import { BriefcaseBusiness, Heart, PenBox } from 'lucide-react';
@@ -23,6 +29,8 @@ const Header = () => {
 		}
 	}
 
+	const { user } = useUser();
+
 	return (
 		<div>
 			<nav className='py-4 flex justify-between items-center'>
@@ -37,35 +45,32 @@ const Header = () => {
 					</SignedOut>
 					<SignedIn>
 						{/* Show "Post a Job" only for recruiters */}
-						<Link to='/postjob'>
-							<Button variant='secondary'>
-								<PenBox size={20} className='mr-2' />
-								Post a Job
-							</Button>
-						</Link>
+						{user?.unsafeMetadata?.role === 'recruiter' && (
+							<Link to='/postjob'>
+								<Button variant='secondary'>
+									<PenBox size={20} className='mr-2' />
+									Post a Job
+								</Button>
+							</Link>
+						)}
 						<UserButton
 							appearance={{
 								elements: {
 									avatarBox: 'w-10 h-10',
 								},
 							}}>
-								<UserButton.MenuItems>
-									<UserButton.Link
+							<UserButton.MenuItems>
+								<UserButton.Link
 									label='My Jobs'
 									labelIcon={<BriefcaseBusiness size={15} />}
-									href='/myjobs'
-									>	
-									</UserButton.Link>
+									href='/myjobs'></UserButton.Link>
 
-									<UserButton.Link
+								<UserButton.Link
 									label='Saved Jobs'
 									labelIcon={<Heart size={15} />}
-									href='/savedjobs'
-									>	
-									</UserButton.Link>
-								</UserButton.MenuItems>
-
-							</UserButton>
+									href='/savedjobs'></UserButton.Link>
+							</UserButton.MenuItems>
+						</UserButton>
 					</SignedIn>
 				</div>
 			</nav>

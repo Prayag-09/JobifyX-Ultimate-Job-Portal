@@ -26,7 +26,7 @@ const LandingPage = () => {
 
 	return (
 		<main className='flex flex-col sm:gap-20 sm:py-20 py-10 gap-10'>
-			<h1 className='text-4xl font-extrabold text-center sm:text-6xl lg:text-8xl tracking-tighter py-4 text-gray-400'>
+			<h1 className='text-3xl font-extrabold text-center sm:text-6xl lg:text-7xl tracking-tighter py-4 text-gray-400'>
 				Your dream job awaits ...
 			</h1>
 			<p className='text-gray-400 text-xl text-center sm:text-2xl sm:mt-2 mt-1'>
@@ -36,12 +36,12 @@ const LandingPage = () => {
 			{/* Buttons Section */}
 			<div className='flex items-center justify-center gap-6'>
 				<Link to='/jobs'>
-					<Button variant='blue' size='xl'>
+					<Button variant='danger' size='xl'>
 						Find Jobs
 					</Button>
 				</Link>
 				<Link to='/postjob'>
-					<Button variant='destructive' size='xl'>
+					<Button variant='dark' size='xl'>
 						Post Jobs
 					</Button>
 				</Link>
@@ -99,7 +99,7 @@ const LandingPage = () => {
 				<Accordion type='single' collapsible className='w-full'>
 					{faqs.map((faq, index) => (
 						<AccordionItem key={index} value={`item-${index + 1}`}>
-							<AccordionTrigger>{faq.question}</AccordionTrigger>
+							<AccordionTrigger >{faq.question}</AccordionTrigger>
 							<AccordionContent>{faq.answer}</AccordionContent>
 						</AccordionItem>
 					))}
